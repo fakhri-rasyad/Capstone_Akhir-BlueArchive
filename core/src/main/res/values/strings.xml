@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Capstone</string>
+    <string name="home">Home Fragment</string>
+    <string name="favorite">Favorite Fragment</string>
+    <string name="student_photo_desc">student_image</string>
+    <string name="school_image_desc">school_image_desc</string>
+    <string name="back_button">back button</string>
+    <string name="student_data">Student Data</string>
+    <string name="removed_student">Removed student</string>
+    <string name="added_student">Added student</string>
+    <string name="no_data_network_error">Data from network is empty, loading from database</string>
+    <string name="no_network_error">Trouble getting new data, loading from database</string>
+    <string name="data_update_success">Successfully update data, loading fragment</string>
+    <string name="title_favorite">Module Title</string>
+    <string name="no_module_error">Favorite module haven\'t been added</string>
+    <string name="module_install_error">Error installing module</string>
+</resources>
