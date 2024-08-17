@@ -19,11 +19,12 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
+            isMinifyEnabled = true
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
+        debug {
+            isMinifyEnabled = true
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
 
@@ -42,9 +43,6 @@ android {
 
 dependencies {
     val roomVersion = "2.6.1"
-//    val glideVersion = "4.16.0"
-    val koinVersion = "4.0.0-RC1"
-    val koinKSPVersion = "1.4.0-RC3"
     val retrofitVersion = "2.11.0"
     val okHTTPLoggerVersion = "4.12.0"
 
@@ -57,6 +55,9 @@ dependencies {
     implementation ("com.squareup.retrofit2:converter-gson:$retrofitVersion")
     implementation ("com.google.code.gson:gson:$retrofitVersion")
     implementation("com.squareup.okhttp3:logging-interceptor:$okHTTPLoggerVersion")
+
+    implementation("net.zetetic:android-database-sqlcipher:4.4.0")
+    implementation("androidx.sqlite:sqlite-ktx:2.4.0")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

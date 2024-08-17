@@ -1,6 +1,5 @@
 package com.k4nd4.favorite
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,16 +10,13 @@ import com.k4nd4.core.domain.model.Student
 import com.k4nd4.core.presentation.rvadapter.StudentRecyclerViewAdapter
 import com.k4nd4.core.utils.IntentProvider
 import com.k4nd4.core.utils.showToast
-import com.k4nd4.favorite.FavoriteViewModel
-import com.k4nd4.favorite.R
 import com.k4nd4.favorite.databinding.FragmentFavoriteBinding
-import com.k4nd4.favorite.favoriteModule
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.context.loadKoinModules
 
 
-class FavoriteFragment() : Fragment() {
+class FavoriteFragment : Fragment() {
 
     private lateinit var binding: FragmentFavoriteBinding
     private val viewModel : FavoriteViewModel by viewModel()

@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingVertical="?actionBarSize"
@@ -15,7 +14,9 @@
         android:src="@drawable/blue_archive_en_logo_svg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/appbar"
+        />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/page_desc"
@@ -63,14 +64,14 @@
         app:layout_constraintTop_toBottomOf="@id/page_desc">
 
         <ImageView
-            android:id="@+id/student_photo"
+            android:id="@+id/studentPhoto"
             android:layout_width="147dp"
             android:layout_height="196dp"
             android:layout_gravity="center_horizontal"
             android:contentDescription="@string/student_photo_desc" />
 
         <TextView
-            android:id="@+id/student_name"
+            android:id="@+id/studentName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -88,7 +89,7 @@
             android:layout_gravity="center_horizontal">
 
             <ImageView
-                android:id="@+id/school_logo"
+                android:id="@+id/schoolLogo"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:contentDescription="@string/school_image_desc" />
@@ -98,7 +99,7 @@
                 android:layout_height="0dp" />
 
             <TextView
-                android:id="@+id/school_name"
+                android:id="@+id/schoolName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical" />
@@ -114,17 +115,17 @@
             android:layout_gravity="center_horizontal">
 
             <ImageView
-                android:id="@+id/birthday_logo"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:src="@drawable/baseline_cake_24" />
+                android:src="@drawable/baseline_cake_24"
+                android:contentDescription="@string/birthday_logo"/>
 
             <Space
                 android:layout_width="16dp"
                 android:layout_height="0dp" />
 
             <TextView
-                android:id="@+id/birthday_date"
+                android:id="@+id/birthdayDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical" />
@@ -133,7 +134,7 @@
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/favorite_button"
+        android:id="@+id/favoriteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
@@ -142,7 +143,9 @@
         android:padding="12dp"
         android:src="@drawable/baseline_favorite_border_24"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/favorite_button"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

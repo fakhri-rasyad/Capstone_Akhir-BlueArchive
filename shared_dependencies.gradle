@@ -12,4 +12,6 @@ dependencies {
     implementation ("io.insert-koin:koin-android:4.0.0-RC1")
     implementation ("io.insert-koin:koin-annotations:1.4.0-RC3")
     ksp ("io.insert-koin:koin-ksp-compiler:1.4.0-RC3")
+
+    debugImplementation ("com.squareup.leakcanary:leakcanary-android:2.14")
 }

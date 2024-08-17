@@ -1,12 +1,11 @@
 package com.k4nd4.core.presentation.rvadapter
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.k4nd4.core.domain.model.Student
 import com.k4nd4.core.databinding.StudentRvItemBinding
+import com.k4nd4.core.domain.model.Student
 
 class StudentRecyclerViewAdapter(
     private val studentList: List<Student>,

@@ -1,10 +1,8 @@
 package com.k4nd4.core.data
 
 import com.k4nd4.core.data.source.local.LocalDataSource
-import com.k4nd4.core.data.source.local.entity.StudentEntity
 import com.k4nd4.core.data.source.remote.RemoteDataSource
 import com.k4nd4.core.data.source.remote.network.ApiResponse
-import com.k4nd4.core.data.source.remote.response.StudentResponse
 import com.k4nd4.core.domain.model.Student
 import com.k4nd4.core.domain.repository.IBlueArchiveRepository
 import com.k4nd4.core.utils.DataMapper
@@ -23,11 +21,11 @@ class BlueArchiveRepository(
         remoteDataSource.getStudents().collect { apiResponse ->
             when (apiResponse) {
                 is ApiResponse.Empty -> emit(Resource.Empty)
-                is ApiResponse.Error -> emit(Resource.Error(apiResponse.message))
+                is ApiResponse.Error -> emit(Resource.Error)
                 is ApiResponse.Success -> {
                     val studentResponseToStudent = DataMapper.studentResponseToStudent(apiResponse.data)
                     insertStudent(studentResponseToStudent)
-                    emit(Resource.Success(studentResponseToStudent))
+                    emit(Resource.Success)
                 }
             }
         }

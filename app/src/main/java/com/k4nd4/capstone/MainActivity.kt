@@ -27,6 +27,7 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.context.GlobalContext
+import org.koin.core.context.stopKoin
 import org.koin.core.logger.Level
 
 class MainActivity : AppCompatActivity() {
@@ -45,19 +46,21 @@ class MainActivity : AppCompatActivity() {
     private val viewModel: MainViewModel by viewModel()
 
     init {
-        GlobalContext.startKoin {
-            androidLogger(Level.NONE)
-            androidContext(this@MainActivity)
-            modules(
-                listOf(
-                    networkModule,
-                    databaseModule,
-                    repositoryModule,
-                    viewModelModule,
-                    useCaseModule,
-                    appInjectModule
+        if(GlobalContext.getOrNull() == null){
+            GlobalContext.startKoin {
+                androidLogger(Level.NONE)
+                androidContext(this@MainActivity)
+                modules(
+                    listOf(
+                        networkModule,
+                        databaseModule,
+                        repositoryModule,
+                        viewModelModule,
+                        useCaseModule,
+                        appInjectModule
+                    )
                 )
-            )
+            }
         }
     }
 
@@ -90,6 +93,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         supportActionBar?.elevation = 0f
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        stopKoin()
     }
 
     private fun setUpSectionPageAdapter(

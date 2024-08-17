@@ -9,7 +9,6 @@ import com.k4nd4.capstone.R
 import com.k4nd4.capstone.databinding.ActivityDetailBinding
 import com.k4nd4.capstone.viewmodel.DetailViewModel
 import com.k4nd4.core.domain.model.Student
-import com.k4nd4.core.utils.DataMapper
 import com.k4nd4.core.utils.showToast
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

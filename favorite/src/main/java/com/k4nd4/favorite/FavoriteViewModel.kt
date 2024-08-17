@@ -6,6 +6,6 @@ import androidx.lifecycle.asLiveData
 import com.k4nd4.core.domain.model.Student
 import com.k4nd4.core.domain.usecase.BlueArchiveUseCase
 
-class FavoriteViewModel(private val blueArchiveUseCase : BlueArchiveUseCase) : ViewModel() {
+class FavoriteViewModel(blueArchiveUseCase : BlueArchiveUseCase) : ViewModel() {
     val students : LiveData<List<Student>> = blueArchiveUseCase.getFavoriteStudent().asLiveData()
 }

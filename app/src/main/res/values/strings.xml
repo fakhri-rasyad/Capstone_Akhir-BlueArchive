@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Capstone</string>
+    <string name="app_name">Capstone Akhir</string>
     <string name="home">Home Fragment</string>
     <string name="favorite">Favorite Fragment</string>
     <string name="student_photo_desc">student_image</string>
@@ -14,4 +14,7 @@
     <string name="title_favorite">Module Title</string>
     <string name="no_module_error">Favorite module haven\'t been added</string>
     <string name="module_install_error">Error installing module</string>
+    <string name="appbar">Appbar</string>
+    <string name="birthday_logo">Birthday Logo</string>
+    <string name="favorite_button">Favorite Button</string>
 </resources>
